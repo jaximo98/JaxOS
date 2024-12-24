@@ -57,7 +57,7 @@
       # Apps
       vlc
       obsidian
-      godot4
+      godot_4
 
       # Discord
       vesktop
