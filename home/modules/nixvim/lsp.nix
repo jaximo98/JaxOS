@@ -88,6 +88,10 @@
           enable = true;
         };
 
+        nixd = {
+          enable = true;
+        };
+
         # pyright = {
         #  enable = true;
         #}

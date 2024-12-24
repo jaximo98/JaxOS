@@ -22,6 +22,7 @@
     ./modules/rofi.nix
     ./modules/firefox.nix       # firefoxt
     ./modules/nixvim.nix
+    ./modules/vscode.nix
 
   ];
 
@@ -44,22 +45,19 @@
       
 
       #LSP and Compilares and Languages
-      nil
+      nixd
       clang
       go
+      go-protobuf
       jetbrains.jdk # Java modificado para usar sus IDEs mejor...
       maven
       python3
       
-      # Editors
-      vscodium
-      jetbrains.goland
-      #jetbrains.clion
-      jetbrains.idea-ultimate
 
       # Apps
       vlc
       obsidian
+      godot4
 
       # Discord
       vesktop
