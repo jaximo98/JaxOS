@@ -9,3 +9,6 @@ tiempo_encendido=$(uptime | awk -F'( |,|:)+' '{print $6 " horas, " $7 " minutos"
 notify-send "Ha pasado una hora desde la ultima notifiacion." \
     "Son las: <u>$hora_actual</u>, llevas en el PC: $tiempo_encendido." \
     --hint=int:transient:5
+
+# Reproduce el audio bell de kitty
+echo -e "\a"
