@@ -1,6 +1,6 @@
 { config, pkgs, ...}:
 {
-  home.file."firefox-theme" = {
+  /*home.file."firefox-theme" = {
     target = ".mozilla/firefox/jaximo/chrome/firefox-theme";
     source = pkgs.fetchFromGitHub {
       owner = "FirefoxCSSThemers";
@@ -8,7 +8,7 @@
       rev = "066681d7f123e359ab564281a148d915a1c25c64";
       hash = "sha256-6+h84ZxEnhDysGD6JQQisyJFqP0RRHptsVjrSw9UKps=";
     };
-  };
+  };*/
 
   programs.firefox = {
     enable = true;
@@ -32,19 +32,31 @@
 
       userChrome = ''
         @import url("firefox-theme/chrome/userChrome.css");
-
-        #main-window #titlebar {
+        /**
+        * Dynamic Horizontal Tabs Toolbar (with animations)
+        * sidebar.verticalTabs: false (with native horizontal tabs)
+        */
+        #main-window #TabsToolbar > .toolbar-items {
           overflow: hidden;
           transition: height 0.3s 0.3s !important;
         }
         /* Default state: Set initial height to enable animation */
-        #main-window #titlebar { height: 3em !important; }
-        #main-window[uidensity="touch"] #titlebar { height: 3.35em !important; }
-        #main-window[uidensity="compact"] #titlebar { height: 2.7em !important; }
+        #main-window #TabsToolbar > .toolbar-items { height: 3em !important; }
+        #main-window[uidensity="touch"] #TabsToolbar > .toolbar-items { height: 3.35em !important; }
+        #main-window[uidensity="compact"] #TabsToolbar > .toolbar-items { height: 2.7em !important; }
         /* Hidden state: Hide native tabs strip */
-        #main-window[titlepreface*="XXX"] #titlebar { height: 0 !important; }
+        #main-window[titlepreface*="XXX"] #TabsToolbar > .toolbar-items { height: 0 !important; }
         /* Hidden state: Fix z-index of active pinned tabs */
         #main-window[titlepreface*="XXX"] #tabbrowser-tabs { z-index: 0 !important; }
+        /* Hidden state: Hide window buttons in tabs-toolbar */
+        #main-window[titlepreface*="XXX"] #TabsToolbar .titlebar-spacer,
+        #main-window[titlepreface*="XXX"] #TabsToolbar .titlebar-buttonbox-container {
+          display: none !important;
+        }
+
+        #sidebar-box #sidebar-header {
+        display: none !important;
+        }
       '';
       userContent = ''
         @import url("firefox-theme/chrome/userContent.css");
@@ -338,7 +350,7 @@
         }
         {
           Title = "Github";
-          URL = "https://github.com/Jaximo98-dev/";
+          URL = "https://github.com/jaximo98/";
         }
       ];
     };
