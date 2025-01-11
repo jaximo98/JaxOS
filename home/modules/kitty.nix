@@ -40,7 +40,7 @@
       update_check_interval = "0";
       enabled_layouts = "tall,fat,grid";
       resize_in_steps = true;
-      bell_path = "~/JaxOS/themes";
+      bell_path = "~/JaxOS/themes/bell.wav";
 
     };
     environment.CURRENT_TERMINAL = "kitty";
