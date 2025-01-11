@@ -10,7 +10,7 @@
 
       theme = "Gruvbox Dark";
 
-      # FOnt
+      # Font
       font_family = "JetBrainsMono Nerd Font";
       font_size = "11.0";
       adjust_line_height = "100%";
@@ -40,6 +40,7 @@
       update_check_interval = "0";
       enabled_layouts = "tall,fat,grid";
       resize_in_steps = true;
+      bell_path = "~/.config/kitty/bell.wav"
 
     };
     environment.CURRENT_TERMINAL = "kitty";
