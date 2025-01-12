@@ -1,4 +1,4 @@
-{device, ...}:
+{pkgs, device, ...}:
 let
   shellAliases = import ./shell_aliases.nix { inherit device; };
 in
