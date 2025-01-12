@@ -3,6 +3,11 @@ let
   shellAliases = import ./shell_aliases.nix { inherit device; };
 in
 {
+
+  home.packages = with pkgs; [
+    pure-prompt
+  ];
+
   programs.zsh = {
     enable = true;
 
@@ -25,7 +30,9 @@ in
     oh-my-zsh = {
       enable = true;
       plugins = [ "git" "colored-man-pages" ];
-      theme = "robbyrussell";
+      initExtra = ''
+      source ${pkgs.pure-prompt}/share/zsh/themes/pure.zsh-theme;
+      '';
     };
   };
 

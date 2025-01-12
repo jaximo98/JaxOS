@@ -102,7 +102,7 @@
         "browser.urlbar.trending.featureGate" = false;
         #Newpage
         "browser.startup.page" = 3;
-        "browser.startup.homepage" = "about:blank";
+        "browser.startup.homepage" = "file:///home/jaximo/JaxOS/themes/firefox_startpage.html";
         "browser.newtabpage.enabled" = false;
         #Pocket
         "extensions.pocket.enabled" = false;
@@ -283,9 +283,6 @@
         "browser.translations.panelShown" = false;
         "media.videocontrols.picture-in-picture.enabled" = false;
         "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
-
-        # Custom New Tab
-        "browser.startup.homepage" = "file:///home/jaximo/JaxOS/themes/firefox_startpage.html";
 
       };
     };
