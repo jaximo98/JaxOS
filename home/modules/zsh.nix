@@ -22,6 +22,7 @@ in
         source "''$(fzf-share)/completion.zsh"
       fi
 
+      source ${pkgs.pure-prompt}/share/zsh/themes/pure.zsh-theme;
     '';
 
     shellAliases = shellAliases.shellAliases;
@@ -30,9 +31,6 @@ in
     oh-my-zsh = {
       enable = true;
       plugins = [ "git" "colored-man-pages" ];
-      initExtra = ''
-      source ${pkgs.pure-prompt}/share/zsh/themes/pure.zsh-theme;
-      '';
     };
   };
 
