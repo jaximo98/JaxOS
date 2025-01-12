@@ -1,14 +1,14 @@
 #
 # Configure and set up networks.
 #
-{ config, ... }:
+{pkgs, config, ... }:
 {
 
   systemd.services.reminder = {
     description = "Recordatorio cada hora en punto";
+    path = with pkgs; [ bash ];
     script = ''
-      #!/bin/bash
-      /home/jaximo/JaxOS/scripts/oclock.sh
+      bash /home/jaximo/JaxOS/scripts/oclock.sh
     '';
     serviceConfig = {
       Type = "oneshot";

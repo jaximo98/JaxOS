@@ -22,7 +22,9 @@ in
         source "''$(fzf-share)/completion.zsh"
       fi
 
-      source ${pkgs.pure-prompt}/share/zsh/themes/pure.zsh-theme;
+      fpath+=(~/JaxOS/themes/zsh_theme $fpath)
+      autoload -U promptinit; promptinit
+      prompt pure
     '';
 
     shellAliases = shellAliases.shellAliases;
