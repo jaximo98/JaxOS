@@ -7,6 +7,7 @@
 
       ./modules/filesystem.nix
       ./modules/security.nix
+      ./modules/services.nix
 
       ./modules/wayland.nix
       ./modules/localization.nix
