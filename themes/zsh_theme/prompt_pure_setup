@@ -818,22 +818,22 @@ prompt_pure_setup() {
 	# Set the colors.
 	typeset -gA prompt_pure_colors_default prompt_pure_colors
 	prompt_pure_colors_default=(
-		execution_time       136   # Gruvbox yellow (136)
-		git:arrow            142   # Gruvbox green (142)
-		git:stash            142   # Gruvbox green (142)
-		git:branch           130   # Gruvbox brown (130)
-		git:branch:cached    167   # Gruvbox red (167)
-		git:action           136   # Gruvbox yellow (136)
-		git:dirty            167   # Gruvbox red (167)
-		host                 130   # Gruvbox brown (130)
-		path                 68    # Gruvbox blue (68)
-		prompt:error         167   # Gruvbox red (167)
-		prompt:success       142   # Gruvbox green (142)
-		prompt:continuation  130   # Gruvbox brown (130)
-		suspended_jobs       167   # Gruvbox red (167)
-		user                 130   # Gruvbox brown (130)
-		user:root            223   # Gruvbox white (223)
-		virtualenv           136   # Gruvbox yellow (136)
+		execution_time       yellow        # Was 136
+		git:arrow           green         # Was 142
+		git:stash           green         # Was 142
+		git:branch          208           # Gruvbox orange
+		git:branch:cached   red           # Was 167
+		git:action          yellow        # Was 136
+		git:dirty           red           # Was 167
+		host                208           # Gruvbox orange
+		path                blue          # Was 68
+		prompt:error        red           # Was 167
+		prompt:success      green         # Was 142
+		prompt:continuation 208           # Gruvbox orange
+		suspended_jobs      red           # Was 167
+		user                208           # Gruvbox orange
+		user:root          223           # Light yellow
+		virtualenv         yellow         # Was 136
 	)
 
 	prompt_pure_colors=("${(@kv)prompt_pure_colors_default}")
