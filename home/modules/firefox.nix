@@ -277,6 +277,11 @@
         "extensions.autoDisableScopes" = 0;
         "extensions.enabledScopes" = 15;
 
+        "browser.firefox-view.feature-tour" = false;
+        "browser.firefox-view.view-count" = false;
+        "browser.tabs.firefox-view" = false;
+        "browser.tabs.firefox-view.logLevel" = false;
+
         #"browser.download.useDownloadDir" = true;
         "browser.translations.enable" = false;
         "browser.translations.automaticallyPopup" = false;

@@ -22,7 +22,7 @@ in
         source "''$(fzf-share)/completion.zsh"
       fi
 
-      fpath+=(~/JaxOS/themes/zsh_theme $fpath)
+      fpath+=("~/JaxOS/themes/zsh_theme")
       autoload -U promptinit; promptinit
       prompt pure
     '';
