@@ -34,6 +34,7 @@
       home-manager
       gnumake
       bat
+      age
 
       tree
       yazi

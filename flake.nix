@@ -6,6 +6,11 @@ inputs = {
   nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
   nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-24.11";
 
+  sops-nix = {
+    url = "github:Mic92/sops-nix";
+    
+  };
+
   home-manager = {
     url = "github:nix-community/home-manager/release-24.11";
     inputs.nixpkgs.follows = "nixpkgs";
@@ -21,7 +26,7 @@ inputs = {
 
 
 
-	outputs = { self, nixpkgs, home-manager, nur, nixvim, ...}:
+	outputs = { self, nixpkgs, home-manager, nur, nixvim, sops-nix,  ...}:
 		let
       username = "jaximo";
       device = "desktop";
@@ -40,6 +45,7 @@ inputs = {
             ./system/configuration.nix
 						./system/hardware/desktop.nix
             home-manager.nixosModules.home-manager
+            sops-nix.nixosModules.sops
              {
                 home-manager.useGlobalPkgs = true;
                 home-manager.useUserPackages = true;
@@ -47,6 +53,7 @@ inputs = {
                   imports = [
                     nur.hmModules.nur
                     nixvim.homeManagerModules.nixvim
+                    
                     ./home/default-home.nix
                     ]; 
                 };
@@ -63,6 +70,7 @@ inputs = {
 					modules = [
             ./system/configuration.nix
 						./system/hardware/laptop.nix
+            sops-nix.nixosModules.sops
             home-manager.nixosModules.home-manager
              {
                 home-manager.useGlobalPkgs = true;

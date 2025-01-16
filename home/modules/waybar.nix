@@ -12,7 +12,10 @@ in
 
         modules-left = ["hyprland/workspaces"];
         modules-center = ["clock"];
-        modules-right = [ "network" "backlight" "pulseaudio" "battery"  ];
+        modules-right = [ "custom/weather" "network" "backlight" "pulseaudio" "battery"  ];
+
+        margin-left = 0;
+        margin-right = 8;
 
         "network" = {
           "format" = "{ifname}";
@@ -34,8 +37,8 @@ in
         };
 
         "pulseaudio" = {
-          "format" = "{volume}% {icon}";
-          "format-bluetooth"= "{volume}% {icon}";
+          "format" = "[{icon}  {volume}%]";
+          "format-bluetooth"= "[{icon} {volume}%]";
           "format-muted"= "";
           "format-icons"= {
               "alsa_output.pci-0000_00_1f.3.analog-stereo"= "";
@@ -59,6 +62,14 @@ in
           "interval" = "2";
           "scroll-step" = "10.0";
           "tooltip" = "false";
+        };
+
+        "custom/weather"= {
+          "format" = "[{}°]";
+          "tooltip" = true;
+          "interval" = 3600;
+          "exec" = "wttrbar --location 'Malaga'";
+          "return-type" = "json";
         };
 
         "clock" = {
