@@ -22,14 +22,25 @@
       window_margin_width = "0";
 
       # Tabs tab bar
-      tab_bar_edge = "bottom";
-      tab_bar_style = "powerline";
-      tab_bar_min_tabs = "1";
-      tab_title_template = "{fmt.fg.red}{bell_symbol}{activity_symbol}{fmt.fg.tab}{index}:{title}";
-      tab_bar_margin_height = "0.0";
+      # Tab bar options
+      tab_bar_edge = "top";
+      tab_bar_margin_width = "3.0";
+      tab_bar_style = "fade";
+      tab_fade = "1.0";
+      tab_bar_align = "left";
+
+      tab_title_template = "{index}: {tab.active_wd.rsplit('/', 1)[-1]}";
+
+      active_tab_font_style = "normal";
+      tab_bar_background = "#272727";
+      inactive_tab_background = "#272727";
+      inactive_tab_foreground = "#ebdbb2";
+      active_tab_background = "#272727";
+      active_tab_foreground = "#b8ba25";
 
       # Background
       background_opacity = "0.9";
+      backgorund_blur = "1";
       #dynamic_background_opacity = "true";
       cursor_shape = "beam";
 
