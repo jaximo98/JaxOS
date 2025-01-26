@@ -37,7 +37,6 @@ in {
 		configurationLimit = 20;
 		extraEntriesBeforeNixOS = true;
 		default = "Windows Boot Manager";
-		theme = "${tartarusTheme}/share/grub/themes/tartarus/theme.txt";
 	};
   boot.loader.grub.extraConfig = "set debug=all";
 
