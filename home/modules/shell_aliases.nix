@@ -24,5 +24,8 @@
     ls = "eza -a --long --sort=name --group-directories-first --icons --header --git-ignore";
     lr = "eza -a -R --long --sort=name --group-directories-first --icons --header --git-ignore";
 
+    netdown = "sudo ip link set enp42s0 down";
+    netup = "sudo ip link set enp42s0 up";
+
   };
 }
