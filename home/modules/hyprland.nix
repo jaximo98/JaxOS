@@ -92,6 +92,7 @@
         "$mod, D, exec, vesktop"
         "$mod, C, exec, codium"
         "$mod, R, exec, rofi -show drun"
+        #"$mod, P, exec, ../../scripts/toggle_monitors.sh"
 
         # Windows, note: two were placed outside in extraConfig
         "$mod, h, movefocus, l"
